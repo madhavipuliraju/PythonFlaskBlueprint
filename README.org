@@ -78,8 +78,8 @@ framework
      #+BEGIN_EXAMPLE
      $ tree -L 1
      .
-     ©À©¤©¤ requirements.txt     ---> Project dependencies file
-     ©À©¤©¤ src                  ---> Source code goes here
-     ©À©¤©¤ tests                ---> Test code goes here
-     ©¸©¤©¤ venv                 ---> Virtual environment file
+     |----- requirements.txt     ---> Project dependencies file
+     |----- src                  ---> Source code goes here
+     |----- tests                ---> Test code goes here
+     |----- venv                 ---> Virtual environment file
      #+END_EXAMPLE
