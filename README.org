@@ -1,0 +1,85 @@
+# PythonFlaskBlueprint
+This repo holds the blue print for python project with flask
+framework
+
+1) Use Python3 as your coding interpreter. Python Version >=
+   3.6 is required
+   #+BEGIN_SRC 
+   python3 --version
+   #+END_SRC
+
+2) Create a new project, where your Python modules and
+   dependencies will be stored.
+   - Create a new project easily by using =cookiecutter= along
+     with a reference templates of your choice. Please refer
+     [[http://cookiecutter-templates.sebastianruml.name/][here]] for more templates 
+     #+BEGIN_EXAMPLE
+     pip3 install cookiecutter
+     cookiecutter https://github.com/cookiecutter-flask/cookiecutter-flask.git
+     #+END_EXAMPLE
+   - You will be asked about your basic info (name, project
+     name, app name, etc.). This info will be used in your
+     new project.
+
+3) Create a new virtual environment inside the application
+   folder, and activate it once you are ready to code your
+   app.
+   #+BEGIN_EXAMPLE
+   sudo apt-get install python3-venv
+   python -m venv new_venv
+   source new_venv/bin/activate
+   #+END_EXAMPLE
+
+4) Code the app of your choice, and make use of third-party
+   libraries if you need to.  
+
+   *Example:* The following command will install =requests=
+   library inside the virtual environment
+   #+BEGIN_EXAMPLE
+   pip install requests
+   #+END_EXAMPLE
+   - Don't forget to declare the dependencies in a
+     requirements.txt file by using the =pip freeze= command.
+     #+BEGIN_EXAMPLE
+     pip freeze
+     #+END_EXAMPLE
+
+5) Upload your project to a Version Control System(VCS) such
+   as Git. But don't upload the virtual environment
+   contents. You can recreate it anytime you need. Also, to
+   lint your code, install a hook for VCS that is executed
+   before or during the commit.
+
+   #+BEGIN_EXAMPLE
+   python<version> -m pip install flake8
+   flake8 --install-hook=git
+   cd <project-repository>/
+   ls
+   git init
+   git add .
+   git commit -m "first commit"
+   git remote add origin git@github.com:<username>/<project-repositoy>.git
+   git push -u origin master
+   #+END_EXAMPLE
+
+6) [Optional] Running Tests
+   #+BEGIN_EXAMPLE
+   source <YOURVIRTUALENV>/bin/activate
+   (myenv) $ pip install -r requirements.txt
+   (myenv) $ python runtests.py
+   #+END_EXAMPLE
+
+7) [Optional] Python projects are not required to have any
+   workspace structure, it is recommended to structure your
+   code, along with its associated test suite and any other
+   scripts or configuration files that will help you work on
+   a full development lifecycle. 
+   - Python workspace could be as follows:
+     #+BEGIN_EXAMPLE
+     $ tree -L 1
+     .
+     ©À©¤©¤ requirements.txt     ---> Project dependencies file
+     ©À©¤©¤ src                  ---> Source code goes here
+     ©À©¤©¤ tests                ---> Test code goes here
+     ©¸©¤©¤ venv                 ---> Virtual environment file
+     #+END_EXAMPLE
